@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+    <!--
+    <div>
+        <label for="username">Name</label>
+        <input type="text" id="username" formControlName="username" />
+    </div>
+    -->
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" />
+    </div>
+    <div>
+      <label for="gender">Gender</label>
+      <select id="gender" formControlName="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div>
+      <label for="age">Age</label>
+      <input type="number" id="age" formControlName="age" />
+    </div>
+  </form>
+  
+  <!-- Add the statement below the form tags -->
+  <pre>{{ form.value | json }}</pre>
+  
